@@ -1,8 +1,8 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
 import Infomation from "./pages/Infomation/page";
 import Service from "./pages/Service/page";
 import ContactGroup from "./components/contact/page";
+import Calculator from "./pages/Calculator/page";
+import Contact from "./pages/Contact/page";
 
 export default function Home() {
   return (
@@ -11,6 +11,8 @@ export default function Home() {
         <Infomation />
         <Service />
         <ContactGroup />
+        <Calculator />
+        <Contact />
       </main>
     </div>
   );
