@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "./components/header/page";
+import Footer from "./components/footer/page";
 
 const geistSans = Inter({
   variable: "--font-inter",
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} font-sans`}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

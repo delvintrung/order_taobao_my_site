@@ -14,7 +14,7 @@ const Header = () => {
       .catch((err) => console.error(err));
   }, []);
   return (
-    <div className="bg-white w-full h-[50px] flex px-7 pt-10 justify-between items-center">
+    <div className="bg-white w-full h-[50px] flex px-14 pt-10 justify-between items-center">
       <div className="flex items-center gap-10">
         <Link href={"/"}>
           <div className="w-[60px] h-[60px] overflow-hidden rounded-full border border-gray-300">
@@ -29,18 +29,26 @@ const Header = () => {
         </Link>
         <ul className="flex gap-5">
           <Link href="#info">
-            <li>Giới thiệu</li>
+            <li className="hover:bg-gray-100 px-2 py-0.5 rounded-xl">
+              Giới thiệu
+            </li>
           </Link>
           <Link href="#service">
-            <li>Dịch Vụ</li>
+            <li className="hover:bg-gray-100 px-2 py-0.5 rounded-xl">
+              Dịch Vụ
+            </li>
           </Link>
 
           <Link href="#calculate">
-            <li>Đổi Tỉ Giá</li>
+            <li className="hover:bg-gray-100 px-2 py-0.5 rounded-xl">
+              Đổi Tỉ Giá
+            </li>
           </Link>
 
           <Link href="#contact">
-            <li>Liên Hệ</li>
+            <li className="hover:bg-gray-100 px-2 py-0.5 rounded-xl">
+              Liên Hệ
+            </li>
           </Link>
         </ul>
       </div>
