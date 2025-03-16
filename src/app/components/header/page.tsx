@@ -14,7 +14,7 @@ const Header = () => {
       .catch((err) => console.error(err));
   }, []);
   return (
-    <div className="bg-white w-full h-[50px] flex px-14 pt-10 justify-between items-center">
+    <div className="bg-white w-full h-[50px] flex px-20 py-10 justify-between items-center fixed top-0 z-50">
       <div className="flex items-center gap-10">
         <Link href={"/"}>
           <div className="w-[60px] h-[60px] overflow-hidden rounded-full border border-gray-300">
