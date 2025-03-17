@@ -4,7 +4,7 @@ import Imgae from "next/image";
 
 const ContactGroup = () => {
   return (
-    <div className="fixed bottom-0 right-20 flex flex-col items-center w-[100px] h-[200px]  gap-3">
+    <div className="fixed bottom-0 right-20 flex flex-col items-center w-[100px] h-[200px]  gap-3 z-50">
       <Link href="https://www.facebook.com/le.van.trung.450113" className="">
         <Imgae
           src="/facebook_icon.png"

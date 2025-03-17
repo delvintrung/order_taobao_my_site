@@ -3,6 +3,7 @@ import Service from "./pages/Service/page";
 import ContactGroup from "./components/contact/page";
 import Calculator from "./pages/Calculator/page";
 import Contact from "./pages/Contact/page";
+import FeedBack from "./pages/Feedback/page";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         <Service />
         <ContactGroup />
         <Calculator />
+        <FeedBack />
         <Contact />
       </main>
     </div>

@@ -50,6 +50,11 @@ const Header = () => {
               Liên Hệ
             </li>
           </Link>
+          <Link href="#feedback">
+            <li className="hover:bg-gray-100 px-2 py-0.5 rounded-xl">
+              Feedback
+            </li>
+          </Link>
         </ul>
       </div>
       <div className="flex items-center gap-5">
