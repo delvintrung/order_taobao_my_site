@@ -11,7 +11,7 @@ import FeedbackCard from "@/app/components/feeback_card/page";
 
 const FeedBack = () => {
   return (
-    <div className="w-full bg-amber-50 px-20 py-10">
+    <div id="feedback" className="w-full bg-amber-50 px-20 py-10">
       <div>
         <Carousel
           opts={{
@@ -23,7 +23,11 @@ const FeedBack = () => {
             {Array.from({ length: 5 }).map((_, index) => (
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                 <div className="p-1">
-                  <FeedbackCard name="Trung" image="/profile.jpg" />
+                  <FeedbackCard
+                    name="Trung"
+                    info_url="https://www.facebook.com/le.van.trung.450113"
+                    image="/profile.jpg"
+                  />
                 </div>
               </CarouselItem>
             ))}

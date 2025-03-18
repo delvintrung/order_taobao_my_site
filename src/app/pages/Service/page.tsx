@@ -11,7 +11,7 @@ const Service = () => {
 
           <div className="text-sm mt-2 text-left">
             <p>
-              hâ 1. Giá cả: Giá cả ở Trung Quốc thường rẻ hơn so với ở Việt Nam{" "}
+              1. Giá cả: Giá cả ở Trung Quốc thường rẻ hơn so với ở Việt Nam{" "}
               <span className="bg-amber-400">từ 30% đến 50%.</span>
             </p>
             <br />
@@ -25,9 +25,18 @@ const Service = () => {
               ở Trung Quốc cũng rất tốt.
             </p>
             <br />
+            <p className="text-red-500">
+              Lưu ý: Do hàng được order từ trung quốc về nên thời gian nhận hàng
+              có thể tầm 1 tuần
+            </p>
+            <br />
+            <p className="bg-amber-300 text-2xl max-w-[700px] p-2">
+              Mua hàng ở Trung Quốc về Việt Nam chỉ có thể thanh toán trước chứ
+              không được thanh toán khi nhận hàng.
+            </p>
           </div>
         </div>
-        <div className="flex justify-center items-center gap-[50px]">
+        <div className="flex justify-center items-center gap-[50px] mt-15">
           <div>Order hộ sáo dizi</div>
           <div>Order TaoBao</div>
         </div>
