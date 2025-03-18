@@ -1,8 +1,9 @@
 import React from "react";
+import Image from "next/image";
 
 const Service = () => {
   return (
-    <section id="service" className="w-full bg-gray-50 h-[500px]">
+    <section id="service" className="w-full bg-gray-50">
       <div className="px-20 pt-10 mt-10 ">
         <div className="flex justify-center items-center flex-col">
           <p className="text-xl font-bold">
@@ -36,9 +37,56 @@ const Service = () => {
             </p>
           </div>
         </div>
-        <div className="flex justify-center items-center gap-[50px] mt-15">
-          <div>Order hộ sáo dizi</div>
-          <div>Order TaoBao</div>
+        <div className="flex justify-center items-center gap-[50px] mt-15 py-20">
+          <div className="flex flex-col justify-center items-center  border-2 border-gray-300 rounded-lg p-5 gap-2  py-15 min-h-[700px]">
+            <p className="text-3xl text-red-600 mb-10">Order sáo dizi</p>
+            <Image
+              className="object-cover"
+              alt=""
+              src={"/order_dizi.jpg"}
+              width={400}
+              height={300}
+            />
+            <div className="w-lg">
+              <p className="w-[500px] text-md text-left px-10">
+                Bản thân mình là người thích chơi sáo dizi của Trung Quốc vì
+                chất âm và nhạc cổ phong của nước bạn, mình có thể đặt được
+                nhũng cây sáo yêu thích của mình trực tiếp với giá cả dễ chịu
+                hơn nên mình cũng sẵn sàng hỗ trợ các bạn với mức phí hợp lý
+                nhất.
+              </p>
+            </div>
+            <div className="mt-10">
+              <p className="text-xl text-yellow-600 w-[400px]">
+                Mức phí: Tùy giá trị sáo, liên hệ để được báo giá cụ thể
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col justify-center items-center  border-2 border-gray-300 rounded-lg p-5 gap-2  py-15 min-h-[700px]">
+            <p className="text-3xl text-red-600 mb-10">Order TaoBao</p>
+            <Image
+              className="object-cover"
+              alt=""
+              src={"/order_cuongluc.jpg"}
+              width={400}
+              height={300}
+            />
+            <div className="w-lg">
+              <p className="w-[500px] text-md text-left px-10">
+                Để đón đầu xu hướng thì các sản phẩm tại TaoBao luôn được cập
+                nhật mẫu mã mới, giá cả rẻ hơn và nhiều mẫu mã hơn, các bạn có
+                nhu cầu order các sản phẩm đến từ TaoBao có thể liên hệ với mình
+                để được hỗ trợ. Mình có thể order các sản phẩm như: quần áo,
+                giày dép, phụ kiện thời trang, đồ gia dụng, đồ điện tử, đồ chơi
+                trẻ em, đồ thể thao, đồ nội thất và nhiều sản phẩm khác.
+              </p>
+            </div>
+            <div className="mt-10">
+              <p className="text-xl text-yellow-600 w-[400px]">
+                Mức phí: Tùy giá trị sáo, liên hệ để được báo giá cụ thể
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
