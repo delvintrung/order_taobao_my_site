@@ -17,3 +17,18 @@ export const connectToDB = async () => {
     console.log(error.message);
   }
 };
+
+export const disconnectFromDB = async () => {
+  if (!isConnected) {
+    console.log("Mongoose is already disconnected");
+    return;
+  }
+
+  try {
+    await mongoose.disconnect();
+    isConnected = false;
+    console.log("Mongoose is disconnected");
+  } catch (error) {
+    console.log(error.message);
+  }
+};

@@ -11,7 +11,7 @@ const Infomation = () => {
         <div className="mt-10 ">
           <div className="w-[50px] h-[50px] overflow-hidden rounded-full border">
             <Image
-              src="/profile.jpg"
+              src="/logo.png"
               alt="Avatar Trung DelVin"
               className="object-cover"
               width={50}

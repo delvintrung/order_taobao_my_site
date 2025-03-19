@@ -19,7 +19,7 @@ const Header = () => {
         <Link href={"/"}>
           <div className="w-[60px] h-[60px] overflow-hidden rounded-full border border-gray-300">
             <Image
-              src="/profile.jpg"
+              src="/logo.png"
               alt="Profile picture"
               width={60}
               height={60}

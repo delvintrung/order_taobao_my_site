@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Personal Order Service - Next.js
 
-## Getting Started
+## Giới thiệu
 
-First, run the development server:
+Đây là một trang web cá nhân giúp khách hàng tại Việt Nam đặt hộ sản phẩm từ Trung Quốc với giá ưu đãi. Hệ thống được phát triển trên nền tảng **Next.js**, mang lại trải nghiệm nhanh chóng và mượt mà.
 
-```bash
+## Công nghệ sử dụng
+
+- **Next.js** - React framework mạnh mẽ giúp tối ưu SEO và hiệu suất.
+- **Tailwind CSS** - Hỗ trợ thiết kế UI nhanh chóng.
+- **MongoDB ** - Lưu trữ dữ liệu.
+- **Vercel** - Triển khai nhanh chóng và ổn định.
+
+## Cách cài đặt và chạy dự án
+
+### Yêu cầu
+
+- Node.js >= 16.x
+- Git
+
+### Cài đặt
+
+```sh
+# Clone repo
+git clone https://github.com/delvintrung/order_taobao_my_site.git
+cd order_taobao_my_site
+
+# Cài đặt dependencies
+npm install
+
+# Chạy development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Trang web sẽ chạy tại `http://localhost:3000`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Triển khai
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Có thể triển khai trên Vercel với lệnh:
 
-## Learn More
+```sh
+vercel
+```
 
-To learn more about Next.js, take a look at the following resources:
+Hoặc deploy trên server riêng với Docker:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```sh
+docker build -t order_taobao_my_site .
+docker run -p 3000:3000 order_taobao_my_site
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Liên hệ
 
-## Deploy on Vercel
+- **Email**: trungm8fordev@gmail.comcom
+- **Website**:
+- **Facebook**: https://facebook.com/le.van.trung.450113
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Cảm ơn bạn đã sử dụng dịch vụ đặt hàng của chúng tôi!
