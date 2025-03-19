@@ -8,12 +8,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import FeedbackCard from "@/app/components/feeback_card/page";
-
-interface Feedback {
-  name: string;
-  link_info: string;
-  image_feedback: string;
-}
+import { FeedbackCardProps } from "@/types/type";
 
 const FeedBack = () => {
   const [feedbacks, setFeedbacks] = useState([]);
@@ -35,13 +30,13 @@ const FeedBack = () => {
         >
           <CarouselContent>
             {feedbacks.length > 0 &&
-              feedbacks.map((feedback: Feedback, index) => (
+              feedbacks.map((feedback: FeedbackCardProps, index) => (
                 <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                   <div className="p-1">
                     <FeedbackCard
                       name={feedback.name}
-                      info_url={feedback.link_info}
-                      image={feedback.image_feedback}
+                      link_info={feedback.link_info}
+                      image_feedback={feedback.image_feedback}
                     />
                   </div>
                 </CarouselItem>

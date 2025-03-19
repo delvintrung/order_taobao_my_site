@@ -1,34 +1,28 @@
 import React from "react";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import Image from "next/image";
 import Link from "next/link";
+import { FeedbackCardProps } from "@/types/type";
 
-type FeedbackCardProps = {
-  name: string;
-  info_url: string;
-  image: string;
-};
-
-const FeedbackCard = ({ name, info_url, image }: FeedbackCardProps) => {
+const FeedbackCard = ({
+  name,
+  link_info,
+  image_feedback,
+}: FeedbackCardProps) => {
   return (
     <Card className="w-[400px] h-[600px]">
       <CardHeader>
         <p>{name}</p>
         <div className="flex items-start gap-1.5">
           <p>Link:</p>{" "}
-          <Link href={info_url} className="text-blue-500">
+          <Link href={link_info} className="text-blue-500">
             Trang cá nhân feedback
           </Link>
         </div>
       </CardHeader>
       <CardContent className="flex aspect-square flex-col items-center justify-center p-6">
         <Image
-          src={image}
+          src={image_feedback}
           alt="Feedback Trung Delvin"
           width={300}
           height={400}

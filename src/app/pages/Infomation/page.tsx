@@ -32,8 +32,8 @@ const Infomation = () => {
               Mình là Trung
               <br />
               Lê Văn Trung là tên đầy đủ của mình, <br /> mình sinh năm 2004,
-              hiện tại mình đang là sinh viên năm cuối tại trường Đại Học Công
-              Nghệ Thông Tin
+              hiện tại mình đang là sinh viên năm cuối tại trường Đại Học Sài
+              Gòn, Quận 5
             </p>
           </div>
         </div>
