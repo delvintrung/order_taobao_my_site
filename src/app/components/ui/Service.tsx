@@ -36,6 +36,65 @@ const Service = () => {
               không được thanh toán khi nhận hàng.
             </p>
           </div>
+          <div className=" mt-10">
+            <p className="text-2xl font-bold text-red-600 text-center">
+              <i>So Sánh Nhanh</i>
+            </p>
+            <div className="flex justify-center  gap-20 my-10">
+              <div className="flex">
+                <Image
+                  src="/compare-price/shopee.png"
+                  width={200}
+                  height={600}
+                  alt="compare shopee"
+                />
+                <Image
+                  src="/compare-price/taobao.png"
+                  width={200}
+                  height={600}
+                  alt="compare shopee"
+                />
+              </div>
+              <div className="w-96">
+                <h3 className="text-2xl font-medium mb-5">
+                  Kết quả so sánh nhanh
+                </h3>
+                <p className="text-xl">
+                  Ảnh 1: là ảnh giá sản phẩm trên shopee
+                </p>
+                <p className="ml-5">
+                  Giá bán{" "}
+                  <span className="bg-amber-300 px-1">tận 1tr3-1tr5</span> cho
+                  một sản phẩm mình rất quan tâm
+                </p>
+                <p className="text-xl">
+                  Ảnh 2: là ảnh giá sản phẩm trên sàn trung quốc
+                </p>
+                <p className="ml-5">
+                  Giá bán chính hãng tại sàn là 228 tệ, nếu có dịp giảm giá thì
+                  còn rẻ hơn, như ở ảnh 2 thì giá loanh quang tầm 700-800k, các
+                  bạn sẽ tiết kiệm hơn rất nhiều
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className=" mt-10">
+            <p className="text-2xl font-bold text-orange-600 text-center">
+              <i>Phí order là bao nhiêu?</i>
+            </p>
+            <div className="flex justify-center gap-20 my-10 bg-gray-200 w-full">
+              <div className="w-[800px]">
+                <h3 className="text-xl font-medium mb-5">
+                  Tùy thuộc vào giá trị đơn hàng, giá tệ quy đổi, ... Nên các
+                  bạn cần nhắn tin trao đổi với mình để biết mức phí
+                </h3>
+                <h3 className="text-xl font-medium mb-5">
+                  Đảm bảo mức phí dễ chịu nhất cho mọi người
+                </h3>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="flex justify-center items-center gap-[50px] mt-15 py-20">
           <div className="flex flex-col justify-center items-center  border-2 border-gray-300 rounded-lg p-5 gap-2  py-15 min-h-[700px]">
