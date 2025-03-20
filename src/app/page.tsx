@@ -1,6 +1,6 @@
 import Infomation from "./pages/Infomation/page";
 import Service from "./pages/Service/page";
-import ContactGroup from "./components/contact/page";
+import ContactGroup from "./components/Contact";
 import Calculator from "./pages/Calculator/page";
 import Contact from "./pages/Contact/page";
 import FeedBack from "./pages/Feedback/page";

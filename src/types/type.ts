@@ -1,5 +1,11 @@
-export interface FeedbackCardProps extends React.ComponentProps<"div"> {
+export interface PageProps {
   name: string;
-  link_info: string;
-  image_feedback: string;
+  link_info?: string;
+  image_feedback?: string;
+}
+
+export interface FeedbackCardProps {
+  name?: string;
+  link_info?: string;
+  image_feedback?: string;
 }

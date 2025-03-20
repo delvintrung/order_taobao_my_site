@@ -15,14 +15,14 @@ const FeedbackCard = ({
         <p>{name}</p>
         <div className="flex items-start gap-1.5">
           <p>Link:</p>{" "}
-          <Link href={link_info} className="text-blue-500">
+          <Link href={link_info || "/profile.jpg"} className="text-blue-500">
             Trang cá nhân feedback
           </Link>
         </div>
       </CardHeader>
       <CardContent className="flex aspect-square flex-col items-center justify-center p-6">
         <Image
-          src={image_feedback}
+          src={image_feedback || "/profile.jpg"}
           alt="Feedback Trung Delvin"
           width={300}
           height={400}

@@ -7,7 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import FeedbackCard from "@/app/components/feedback_card/page";
+import FeedbackCard from "@/app/components/FeedbackCard";
 import { FeedbackCardProps } from "@/types/type";
 
 const FeedBack = () => {
