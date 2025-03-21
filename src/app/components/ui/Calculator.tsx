@@ -28,7 +28,7 @@ const Calculator = () => {
   return (
     <div
       id="calculate"
-      className="w-full h-[200px] bg-white px-20 py-30 flex justify-center items-center flex-col"
+      className="w-screen md:w-full md:h-[200px] bg-white md:px-20 px-10 py-30 flex justify-center items-center flex-col"
     >
       <div>
         <p className="text-3xl font-bold">Đổi tiền nhanh từ Nhân dân tệ</p>

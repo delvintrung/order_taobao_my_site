@@ -13,13 +13,13 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="w-full h-screen bg-gray-100 p-20 flex gap-4 items-center justify-center"
+      className="w-screen md:w-full md:h-screen  bg-gray-100 p-20 flex gap-4 items-center justify-center"
     >
       <div className="flex flex-col gap-4 items-center">
         <h1 className="text-2xl font-bold decoration-amber-100">
           Thông tin chính chủ:
         </h1>
-        <div className="flex justify-between items-center gap-4 mt-5">
+        <div className="md:flex justify-between items-center gap-4 md:mt-5 pb-50 md:pb-0">
           <Card className="text-center flex justify-center flex-col w-2xs min-h-[480px]">
             <CardHeader>
               <CardTitle>Tài Khoản Ngân Hàng</CardTitle>

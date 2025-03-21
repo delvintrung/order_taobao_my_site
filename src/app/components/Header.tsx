@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import Hamberger from "./ui/mobile/Hamburger";
 
 const Header = () => {
   const [rate, setRate] = useState<number>(0);
@@ -14,8 +15,21 @@ const Header = () => {
       .catch((err) => console.error(err));
   }, []);
   return (
-    <div className="bg-white w-full h-[50px] flex px-20 py-10 justify-between items-center fixed top-0 z-50">
-      <div className="flex items-center gap-10">
+    <div className="bg-white w-screen md:w-full h-[50px] flex px-5 md:px-20 py-10 justify-between items-center fixed top-0 z-50">
+      <div className="md:hidden">
+        <Link href={"/"}>
+          <div className="w-[60px] h-[60px] overflow-hidden rounded-full border border-gray-300">
+            <Image
+              src="/logo.png"
+              alt="Profile picture"
+              width={60}
+              height={60}
+              className="object-cover"
+            />
+          </div>
+        </Link>
+      </div>
+      <div className="hidden items-center gap-10 md:flex">
         <Link href={"/"}>
           <div className="w-[60px] h-[60px] overflow-hidden rounded-full border border-gray-300">
             <Image
@@ -57,7 +71,10 @@ const Header = () => {
           </Link>
         </ul>
       </div>
-      <div className="flex items-center gap-5">
+
+      {/* Hamberger menu */}
+      <Hamberger />
+      <div className="hidden items-center gap-5 md:flex">
         <div>
           <span>Giá Nhân Dân Tệ</span> <br />
           <span>1 CNY = {rate != 0 ? rate : "Đang cập nhật"} VND</span>

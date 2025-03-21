@@ -7,7 +7,7 @@ import FeedBack from "./components/ui/Feedback";
 
 export default function Home() {
   return (
-    <div className=" ">
+    <div className="size-fit md:w-full">
       <main className="relative">
         <Infomation />
         <Service />

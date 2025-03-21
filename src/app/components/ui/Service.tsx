@@ -3,9 +3,9 @@ import Image from "next/image";
 
 const Service = () => {
   return (
-    <section id="service" className="w-full bg-gray-50">
-      <div className="px-20 pt-10 mt-10 ">
-        <div className="flex justify-center items-center flex-col">
+    <section id="service" className="w-screen md:w-full bg-gray-50">
+      <div className="px-10 md:px-20 pt-10 mt-10 min-w-[400px] max-w-[450px] md:max-w-[1400px]">
+        <div className="md:flex justify-center items-center flex-col">
           <p className="text-xl font-bold">
             Tại sao cần đặt từ Trung Quốc về chứ không mua ở Việt Nam?
           </p>
@@ -40,7 +40,7 @@ const Service = () => {
             <p className="text-2xl font-bold text-red-600 text-center">
               <i>So Sánh Nhanh</i>
             </p>
-            <div className="flex justify-center  gap-20 my-10">
+            <div className=" md:flex justify-center  gap-20 my-10">
               <div className="flex">
                 <Image
                   src="/compare-price/shopee.png"
@@ -55,8 +55,8 @@ const Service = () => {
                   alt="compare shopee"
                 />
               </div>
-              <div className="w-96">
-                <h3 className="text-2xl font-medium mb-5">
+              <div className="md:w-96 max-w-[400px]">
+                <h3 className="mt-5 md:mt-0 text-2xl font-medium mb-5">
                   Kết quả so sánh nhanh
                 </h3>
                 <p className="text-xl">
@@ -96,7 +96,7 @@ const Service = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-center items-center gap-[50px] mt-15 py-20">
+        <div className="md:flex justify-center items-center gap-[50px] mt-15 py-20">
           <div className="flex flex-col justify-center items-center  border-2 border-gray-300 rounded-lg p-5 gap-2  py-15 min-h-[700px]">
             <p className="text-3xl text-red-600 mb-10">Order sáo dizi</p>
             <Image
@@ -107,7 +107,7 @@ const Service = () => {
               height={300}
             />
             <div className="w-lg">
-              <p className="w-[500px] text-md text-left px-10">
+              <p className=" md:max-w-[500px] text-md text-left px-10">
                 Bản thân mình là người thích chơi sáo dizi của Trung Quốc vì
                 chất âm và nhạc cổ phong của nước bạn, mình có thể đặt được
                 nhũng cây sáo yêu thích của mình trực tiếp với giá cả dễ chịu
