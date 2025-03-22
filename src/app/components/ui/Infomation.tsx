@@ -6,7 +6,7 @@ const Infomation = () => {
   return (
     <div
       id="info"
-      className="w-screen md:w-full md:h-[500px] bg-white overflow-hidden mt-[100px]"
+      className="w-screen md:w-full md:h-[500px] bg-white overflow-hidden mt-10 md:mt-[100px]"
     >
       <div className="md:px-20 px-10 pt-2 md:flex gap-10">
         <div className="mt-10">
@@ -20,7 +20,7 @@ const Infomation = () => {
             />
           </div>
           <div className="mt-10">
-            <h1 className="text-xl md:text-3xl md:ml-10">
+            <h1 className="text-2xl font-extrabold md:text-3xl md:ml-10">
               <i>"Uy tín mất một lần, khó khôi phục một đời"</i>
             </h1>
 

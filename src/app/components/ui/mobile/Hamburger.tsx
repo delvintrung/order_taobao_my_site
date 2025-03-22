@@ -12,35 +12,48 @@ const Hamburger = () => {
         <GiHamburgerMenu size={50} />
       </div>
       <div className={isOpen ? "block" : "hidden"}>
-        <ul className="absolute top-[60px] right-[-50px] bg-white text-3xl rounded-lg p-4 w-[250px] z-50">
-          <Link href="#info">
-            <li className="hover:bg-gray-100 px-2 py-0.5 rounded-xl">
-              Giới thiệu
-            </li>
-          </Link>
-          <Link href="#service">
-            <li className="hover:bg-gray-100 px-2 py-0.5 rounded-xl">
-              Dịch Vụ
-            </li>
-          </Link>
+        <div className=" w-screen bg-black/30 h-screen top-[60px] right-[-20px] absolute">
+          <ul className="absolute top-0 right-[0px] bg-white text-3xl  p-4 w-[250px] h-screen z-50">
+            <Link href="#info">
+              <li className="hover:bg-gray-100 px-2 py-0.5 rounded-xl">
+                Giới thiệu
+              </li>
+              <div className="h-0.5 bg-gray-400 w-full mb-1"></div>
+            </Link>
 
-          <Link href="#calculate">
-            <li className="hover:bg-gray-100 px-2 py-0.5 rounded-xl">
-              Đổi Tỉ Giá
-            </li>
-          </Link>
+            <Link href="#service">
+              <li className="hover:bg-gray-100 px-2 py-0.5 rounded-xl">
+                Dịch Vụ
+              </li>
+              <div className="h-0.5 bg-gray-400 w-full mb-1"></div>
+            </Link>
 
-          <Link href="#contact">
-            <li className="hover:bg-gray-100 px-2 py-0.5 rounded-xl">
-              Liên Hệ
-            </li>
-          </Link>
-          <Link href="#feedback">
-            <li className="hover:bg-gray-100 px-2 py-0.5 rounded-xl">
-              Feedback
-            </li>
-          </Link>
-        </ul>
+            <Link href="#calculate">
+              <li className="hover:bg-gray-100 px-2 py-0.5 rounded-xl">
+                Đổi Tỉ Giá
+              </li>
+              <div className="h-0.5 bg-gray-400 w-full mb-1"></div>
+            </Link>
+
+            <Link href="#contact">
+              <li className="hover:bg-gray-100 px-2 py-0.5 rounded-xl">
+                Liên Hệ
+              </li>
+              <div className="h-0.5 bg-gray-400 w-full mb-1"></div>
+            </Link>
+            <Link href="#feedback">
+              <li className="hover:bg-gray-100 px-2 py-0.5 rounded-xl">
+                Feedback
+              </li>
+              <div className="h-0.5 bg-gray-400 w-full mb-1"></div>
+            </Link>
+            <Link href="/faq">
+              <li className="hover:bg-gray-100 px-2 py-0.5 rounded-xl">
+                Hỏi đáp
+              </li>
+            </Link>
+          </ul>
+        </div>
       </div>
     </div>
   );
