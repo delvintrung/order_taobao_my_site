@@ -19,7 +19,7 @@ const Contact = () => {
         <h1 className="text-2xl font-bold decoration-amber-100">
           Thông tin chính chủ:
         </h1>
-        <div className="md:flex justify-between items-center gap-4 md:mt-5 pb-50 md:pb-0">
+        <div className="md:flex justify-between items-center gap-4 md:mt-5 pb-10 md:pb-0">
           <Card className="text-center flex justify-center flex-col w-2xs min-h-[480px]">
             <CardHeader>
               <CardTitle>Tài Khoản Ngân Hàng</CardTitle>

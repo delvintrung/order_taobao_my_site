@@ -20,13 +20,16 @@ const FeedBack = () => {
       });
   }, []);
   return (
-    <div id="feedback" className="w-full bg-amber-50 px-20 py-10">
+    <div id="feedback" className="w-full bg-amber-50 md:px-20 px-10  py-10">
       <div>
+        <p className="md:hidden text-2xl mx-auto font-bold text-center mb-5">
+          Đánh giá từ khách hàng
+        </p>
         <Carousel
           opts={{
             align: "start",
           }}
-          className="w-full "
+          className="w-full md:max-w-[1400px]"
         >
           <CarouselContent>
             {feedbacks.length > 0 &&
@@ -42,9 +45,12 @@ const FeedBack = () => {
                 </CarouselItem>
               ))}
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
+          <CarouselPrevious className="hidden md:block" />
+          <CarouselNext className="hidden md:block" />
         </Carousel>
+        <p className="text-red-700 text-xl font-medium text-center md:hidden mt-5">
+          Vuốt trái phải để xem thêm
+        </p>
       </div>
     </div>
   );

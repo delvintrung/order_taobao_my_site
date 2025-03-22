@@ -4,7 +4,7 @@ import Image from "next/image";
 const Service = () => {
   return (
     <section id="service" className="w-screen md:w-full bg-gray-50">
-      <div className="px-10 md:px-20 pt-10 mt-10 min-w-[400px] max-w-[450px] md:max-w-[1400px]">
+      <div className="px-10 md:px-20 pt-10 mt-10 min-w-[400px] w-full md:max-w-[1400px]">
         <div className="md:flex justify-center items-center flex-col">
           <p className="text-xl font-bold">
             Tại sao cần đặt từ Trung Quốc về chứ không mua ở Việt Nam?
@@ -106,8 +106,8 @@ const Service = () => {
               width={400}
               height={300}
             />
-            <div className="w-lg">
-              <p className=" md:max-w-[500px] text-md text-left px-10">
+            <div className="w-full md:w-lg">
+              <p className="w-full md:max-w-[500px] text-md text-left md:px-10 mt-2 md:mt-0">
                 Bản thân mình là người thích chơi sáo dizi của Trung Quốc vì
                 chất âm và nhạc cổ phong của nước bạn, mình có thể đặt được
                 nhũng cây sáo yêu thích của mình trực tiếp với giá cả dễ chịu
@@ -116,7 +116,7 @@ const Service = () => {
               </p>
             </div>
             <div className="mt-10">
-              <p className="text-xl text-yellow-600 w-[400px]">
+              <p className="text-xl text-yellow-600 md:w-[400px]">
                 Mức phí: Tùy giá trị sáo, liên hệ để được báo giá cụ thể
               </p>
             </div>
@@ -130,8 +130,8 @@ const Service = () => {
               width={400}
               height={300}
             />
-            <div className="w-lg">
-              <p className="w-[500px] text-md text-left px-10">
+            <div className="w-full md:w-lg">
+              <p className="w-full md:max-w-[500px] text-md text-left md:px-10 mt-2 md:mt-0">
                 Để đón đầu xu hướng thì các sản phẩm tại TaoBao luôn được cập
                 nhật mẫu mã mới, giá cả rẻ hơn và nhiều mẫu mã hơn, các bạn có
                 nhu cầu order các sản phẩm đến từ TaoBao có thể liên hệ với mình
@@ -141,7 +141,7 @@ const Service = () => {
               </p>
             </div>
             <div className="mt-10">
-              <p className="text-xl text-yellow-600 w-[400px]">
+              <p className="text-xl text-yellow-600 md:w-[400px]">
                 Mức phí: Tùy giá trị sáo, liên hệ để được báo giá cụ thể
               </p>
             </div>

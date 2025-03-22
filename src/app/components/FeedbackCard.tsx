@@ -10,7 +10,7 @@ const FeedbackCard = ({
   image_feedback,
 }: FeedbackCardProps) => {
   return (
-    <Card className="w-[400px] h-[600px]">
+    <Card className="w-full md:w-[400px] h-[600px]">
       <CardHeader>
         <p>{name}</p>
         <div className="flex items-start gap-1.5">
