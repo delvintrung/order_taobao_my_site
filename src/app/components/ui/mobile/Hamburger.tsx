@@ -47,7 +47,7 @@ const Hamburger = () => {
               </li>
               <div className="h-0.5 bg-gray-400 w-full mb-1"></div>
             </Link>
-            <Link href="/faq">
+            <Link href="pages/faq">
               <li className="hover:bg-gray-100 px-2 py-0.5 rounded-xl">
                 Hỏi đáp
               </li>
