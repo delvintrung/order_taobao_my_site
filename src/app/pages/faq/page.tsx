@@ -18,7 +18,7 @@ const FAQ = () => {
           Các câu hỏi thường gặp:
         </p>
       </div>
-      <Accordion type="single" collapsible className="px-10">
+      <Accordion type="single" collapsible className="px-10 md:px-20">
         <AccordionItem value="item-1">
           <AccordionTrigger>Bạn có thể liên hệ tôi qua đâu?</AccordionTrigger>
           <AccordionContent>
@@ -61,7 +61,7 @@ const FAQ = () => {
             về trên tay các bạn được rồi
           </AccordionContent>
         </AccordionItem>
-        <AccordionItem value="item-44">
+        <AccordionItem value="item-4">
           <AccordionTrigger>
             Nếu hàng có vấn đề muốn đổi trả thì sao?
           </AccordionTrigger>
@@ -72,8 +72,19 @@ const FAQ = () => {
             sẽ hỗ trợ đổi trả trong vòng 7 ngày kể từ khi nhận hàng.
           </AccordionContent>
         </AccordionItem>
+        <AccordionItem value="item-5">
+          <AccordionTrigger>
+            Tại sao giá nhân dân tệ có thể tăng 200-300đ cho một tệ?
+          </AccordionTrigger>
+          <AccordionContent>
+            Vì nhân dân tệ mình cần phải đi mua tại bên trung gian nên sẽ bị
+            tăng giá lên một ít. Hiểu đơn gian rằng mình không có sẵn nhân dân
+            tệ mà mình cần phải đi đổi nhân dân tệ để thực hiện giao dịch giúp
+            các bạn
+          </AccordionContent>
+        </AccordionItem>
       </Accordion>
-      <div className="px-10 mt-10 ">
+      <div className="px-10 mt-10 md:px-20">
         <p className=" text-base">
           Nếu có bất kỳ câu hỏi nào khác có thể liên hệ trực tiếp với tui để
           được hỗ trợ nhiệt tình nha.
