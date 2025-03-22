@@ -1,5 +1,5 @@
 import { connectToDB, disconnectFromDB } from "../../../utils/database";
-import Feedback from "@/app/models/feedback";
+import Feedback from "@/models/feedback";
 
 export const GET = async (request: Request) => {
   try {
