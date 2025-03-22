@@ -12,36 +12,42 @@ const Hamburger = () => {
         <GiHamburgerMenu size={50} />
       </div>
       <div className={isOpen ? "block" : "hidden"}>
-        <div className=" w-screen bg-black/30 h-screen top-[60px] right-[-20px] absolute">
+        <div
+          className=" w-screen bg-black/30 h-screen top-[60px] right-[-20px] absolute"
+          onClick={(e) => {
+            setIsOpen(false);
+            e.stopPropagation();
+          }}
+        >
           <ul className="absolute top-0 right-[0px] bg-white text-3xl  p-4 w-[250px] h-screen z-50">
-            <Link href="#info">
+            <Link href="/">
               <li className="hover:bg-gray-100 px-2 py-0.5 rounded-xl">
                 Giới thiệu
               </li>
               <div className="h-0.5 bg-gray-400 w-full mb-1"></div>
             </Link>
 
-            <Link href="#service">
+            <Link href="/">
               <li className="hover:bg-gray-100 px-2 py-0.5 rounded-xl">
                 Dịch Vụ
               </li>
               <div className="h-0.5 bg-gray-400 w-full mb-1"></div>
             </Link>
 
-            <Link href="#calculate">
+            <Link href="/">
               <li className="hover:bg-gray-100 px-2 py-0.5 rounded-xl">
                 Đổi Tỉ Giá
               </li>
               <div className="h-0.5 bg-gray-400 w-full mb-1"></div>
             </Link>
 
-            <Link href="#contact">
+            <Link href="/">
               <li className="hover:bg-gray-100 px-2 py-0.5 rounded-xl">
                 Liên Hệ
               </li>
               <div className="h-0.5 bg-gray-400 w-full mb-1"></div>
             </Link>
-            <Link href="#feedback">
+            <Link href="/">
               <li className="hover:bg-gray-100 px-2 py-0.5 rounded-xl">
                 Feedback
               </li>
