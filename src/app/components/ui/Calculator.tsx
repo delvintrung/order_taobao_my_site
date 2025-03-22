@@ -70,6 +70,9 @@ const Calculator = () => {
           />
           <label> VND</label>
         </div>
+        <p className="w-full text-sm mt-4 text-red-500 p-4 bg-amber-100 rounded-b-sm">
+          Đây chỉ là giá tham khảo, giá tệ có thể tăng nhẹ 200-300đ cho 1 tệ
+        </p>
       </div>
     </div>
   );
