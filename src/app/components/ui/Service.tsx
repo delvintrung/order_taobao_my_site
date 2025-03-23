@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Service = () => {
   return (
@@ -35,6 +36,15 @@ const Service = () => {
               Mua hàng ở Trung Quốc về Việt Nam chỉ có thể thanh toán trước chứ
               không được thanh toán khi nhận hàng.
             </p>
+          </div>
+          <div className="hidden md:block mx-auto  mt-5">
+            <Link
+              href="pages/faq"
+              className="rounded-lg text-white bg-orange-500 px-5 py-2 hover:text-blue-500 hover:duration-75"
+            >
+              {" "}
+              Xem Các Câu Hỏi Thường Gặp
+            </Link>
           </div>
           <div className=" mt-10">
             <p className="text-2xl font-bold text-red-600 text-center">

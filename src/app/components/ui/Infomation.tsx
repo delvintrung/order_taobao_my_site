@@ -32,7 +32,7 @@ const Infomation = () => {
             <p className="max-w-[400px] md:max-w-[500px] mt-5 md:ml-10 text-2xl">
               Mình là Trung
               <br />
-              Lê Văn Trung là tên đầy đủ của mình, <br /> mình sinh năm 2004,
+              Lê Văn Trung là tên đầy đủ của mình, <br />
               hiện tại mình đang là sinh viên năm cuối tại trường Đại Học Sài
               Gòn, Quận 5
             </p>

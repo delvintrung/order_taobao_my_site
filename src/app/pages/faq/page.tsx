@@ -83,6 +83,34 @@ const FAQ = () => {
             các bạn
           </AccordionContent>
         </AccordionItem>
+
+        <AccordionItem value="item-6">
+          <AccordionTrigger>
+            Làm sao để bạn theo dõi được đơn hàng của mình?
+          </AccordionTrigger>
+          <AccordionContent>
+            Sau khi đặt hàng, mình sẽ gửi bạn ảnh xác nhận đã đăth đơn hàng, đến
+            khi đơn hàng được vận chuyển thì mình sẽ gửi cho bạn mã vận của đơn
+            hàng.
+            <br />
+            Bạn có thể vào trang này để tra cứu đơn hàng của mình:
+            <Link href="https://www.17track.net/zh-cn">
+              <div className="mx-2 items-center gap-1 inline-flex rounded-[4px] border border-blue-500">
+                <Image
+                  src="/17track.png"
+                  alt=""
+                  width={20}
+                  height={20}
+                  className=""
+                />{" "}
+                <p>17Track</p>
+              </div>
+            </Link>
+            <br />
+            Điền mã vận và nhà vận chuyển vào là có thể theo dõi được đơn hàng
+            của bạn ( 2 thông tin mã vận và đơn vị vận chuyển mình sẽ cung cấp )
+          </AccordionContent>
+        </AccordionItem>
       </Accordion>
       <div className="px-10 mt-10 md:px-20">
         <p className=" text-base">
