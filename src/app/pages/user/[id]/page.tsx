@@ -4,7 +4,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useParams } from "next/navigation";
 import Image from "next/image";
 import { useSession } from "next-auth/react";
-import { getOrderByEmail } from "@/app/fetch/fetchData";
+import { getOrderById } from "@/app/fetch/fetchData";
 import {
   Table,
   TableBody,
@@ -21,13 +21,13 @@ import { Order } from "@/types/type";
 const User = () => {
   const params = useParams();
   const { data: session } = useSession();
-  const [orders, setOrders] = useState([]);
+  const [orders, setOrders] = useState<Order[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
       const id = params.id as string;
       if (id) {
-        const data = await getOrderByEmail(id);
+        const data = await getOrderById(id);
         setOrders(data);
       }
     };
@@ -59,9 +59,7 @@ const User = () => {
             <div className="flex gap-4 mt-1.5">
               <label className="text-xl">Email:</label>
               <p className="text-xl">
-                {typeof params.email === "string"
-                  ? params.email.replace("%", "@")
-                  : ""}
+                {(session?.user?.email ?? "").replace("%", "@")}
               </p>
             </div>
           </div>

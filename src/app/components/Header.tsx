@@ -6,6 +6,16 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import Hamberger from "./ui/mobile/Hamburger";
 import { useSession, signIn, signOut } from "next-auth/react";
+import type { Session, DefaultSession } from "next-auth";
+
+// Extend the Session type to include the `id` property on `user`
+declare module "next-auth" {
+  interface Session {
+    user: {
+      id?: string;
+    } & DefaultSession["user"];
+  }
+}
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const Header = () => {
@@ -77,7 +87,7 @@ const Header = () => {
 
       {/* Hamberger menu */}
       <Hamberger />
-      <div className="hidden items-center gap-5 md:flex">
+      <div className="flex gap-5 items-center">
         <div>
           <span>Giá Nhân Dân Tệ</span> <br />
           <span>1 CNY = {rate != 0 ? rate : "Đang cập nhật"} VND</span>

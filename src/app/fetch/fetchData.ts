@@ -1,5 +1,6 @@
-export async function getOrderByEmail(id: string) {
-  const res = await fetch("/api/userOrder/" + id, {
+import { Order } from "@/types/type";
+export async function getOrderById(id: string): Promise<Order[]> {
+  const res = await fetch(`/api/userOrder/${id}`, {
     cache: "no-store",
   });
 

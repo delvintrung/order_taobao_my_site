@@ -18,13 +18,14 @@ export async function POST(req: Request) {
   const arrayBuffer = await file.arrayBuffer();
   const buffer = Buffer.from(arrayBuffer);
 
-  return new Promise((resolve) => {
+  return await new Promise<Response>((resolve) => {
     cloudinary.uploader
       .upload_stream({ folder: "taobao_uploads" }, (error, result) => {
         if (error) {
           resolve(NextResponse.json({ error: error.message }, { status: 500 }));
+        } else {
+          resolve(NextResponse.json({ url: result?.secure_url }));
         }
-        resolve(NextResponse.json({ url: result?.secure_url }));
       })
       .end(buffer);
   });
