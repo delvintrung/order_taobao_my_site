@@ -1,18 +1,16 @@
-import type { Metadata } from "next";
+"use client";
+
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import { SessionProvider } from "next-auth/react";
+import Provider from "./components/Provider";
 
 const geistSans = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
 });
-
-export const metadata: Metadata = {
-  title: "Nhận Order Các Sản Phẩm Tại Trung Quốc | Trung Delvin",
-  description: "Trang web chính thức của Trung Delvin",
-};
 
 export default function RootLayout({
   children,
@@ -22,9 +20,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} font-sans`}>
-        <Header />
-        {children}
-        <Footer />
+        <Provider>
+          <Header />
+          {children}
+          <Footer />
+        </Provider>
       </body>
     </html>
   );

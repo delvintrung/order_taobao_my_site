@@ -5,8 +5,11 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Hamberger from "./ui/mobile/Hamburger";
+import { useSession, signIn, signOut } from "next-auth/react";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const Header = () => {
+  const { data: session } = useSession();
   const [rate, setRate] = useState<number>(0);
   useEffect(() => {
     fetch("/api/exchangeRate")
@@ -79,7 +82,27 @@ const Header = () => {
           <span>Giá Nhân Dân Tệ</span> <br />
           <span>1 CNY = {rate != 0 ? rate : "Đang cập nhật"} VND</span>
         </div>
-        <Button>Đặt Hàng</Button>
+        {session ? (
+          <div>
+            <p>Xin chào, {session.user?.name}!</p>
+            <div className="flex gap-5 items-center">
+              <Link
+                href={`/pages/user/${session.user?.id!}`}
+                className="p-2 cursor-pointer hover:bg-gray-100"
+              >
+                <Avatar>
+                  <AvatarImage
+                    src={session.user?.image || "https://github.com/shadcn.png"}
+                  />
+                  <AvatarFallback>CN</AvatarFallback>
+                </Avatar>
+              </Link>
+              <Button onClick={() => signOut()}>Đăng xuất</Button>
+            </div>
+          </div>
+        ) : (
+          <Button onClick={() => signIn("google")}>Đăng Nhập</Button>
+        )}
       </div>
     </div>
   );
