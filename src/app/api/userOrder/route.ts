@@ -23,9 +23,12 @@ export const POST = async (request: Request) => {
     const order = new Order(body);
     await order.save();
     disconnectFromDB();
-    return new Response(JSON.stringify(order), {
-      status: 201,
-    });
+    return new Response(
+      JSON.stringify({ status: 1, message: "Them don hang thanh cong" }),
+      {
+        status: 201,
+      }
+    );
   } catch (error) {
     return new Response(JSON.stringify({ error: "Lỗi server" }), {
       status: 500,

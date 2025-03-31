@@ -50,3 +50,8 @@ export interface Order {
   note?: string;
   owener?: User;
 }
+
+export interface ResponseInsert {
+  status: number;
+  message: string;
+}

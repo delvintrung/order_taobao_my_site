@@ -110,7 +110,13 @@ const Header = () => {
                   <AvatarFallback>CN</AvatarFallback>
                 </Avatar>
               </Link>
-              <Button onClick={() => signOut()}>Đăng xuất</Button>
+              <Button
+                onClick={() => {
+                  signOut();
+                }}
+              >
+                Đăng xuất
+              </Button>
             </div>
           </div>
         ) : (

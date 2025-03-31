@@ -23,13 +23,8 @@ import FooterSidebar from "./FooterSidebar";
 export function AppSidebar() {
   const items = [
     {
-      title: "Trang chủ",
-      url: "/admin",
-      icon: Home,
-    },
-    {
       title: "Đơn Hàng",
-      url: "/admin/order",
+      url: "/admin",
       icon: Package,
     },
     {

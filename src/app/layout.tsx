@@ -1,5 +1,5 @@
 "use client";
-
+import { Analytics } from "@vercel/analytics/react";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
@@ -23,6 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} font-sans`}>
         <Provider>
+          <Analytics />
           {!isAdmin && <Header />}
           {children}
           {!isAdmin && <Footer />}

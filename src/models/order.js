@@ -4,7 +4,6 @@ const OrderScheme = new Schema({
   userId: {
     type: Schema.Types.ObjectId,
     ref: "User",
-    required: [true, "UserId is required"],
   },
   productName: {
     type: String,
@@ -24,7 +23,6 @@ const OrderScheme = new Schema({
   },
   totalPrice: {
     type: Number,
-    required: [true, "totalPrice is required"],
   },
   status: {
     type: String,

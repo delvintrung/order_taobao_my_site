@@ -10,20 +10,27 @@ import {
   TableBody,
   TableCaption,
   TableCell,
-  TableFooter,
   TableHead,
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
 import Link from "next/link";
 import { Order } from "@/types/type";
+import { Button } from "@/components/ui/button";
 
 const User = () => {
   const params = useParams();
   const { data: session } = useSession();
   const [orders, setOrders] = useState<Order[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [isAdmin, setIsAdmin] = useState<boolean>(false);
 
   useEffect(() => {
+    if (session?.user?.email == process.env.ADMIN_EMAIL) {
+      setIsAdmin(true);
+    } else {
+      setIsAdmin(false);
+    }
     const fetchData = async () => {
       const id = params.id as string;
       if (id) {
@@ -32,6 +39,7 @@ const User = () => {
       }
     };
     fetchData();
+    console.log(isAdmin);
   }, [params.id]);
   return (
     <div className="flex flex-col items-center mt-30 h-screen px-20">
@@ -56,12 +64,17 @@ const User = () => {
               <label className="text-xl">Tên:</label>
               <p className="text-xl">{session?.user?.name || "Nguyễn Văn A"}</p>
             </div>
-            <div className="flex gap-4 mt-1.5">
+            <div className="flex gap-4 mt-1.5 mb-2">
               <label className="text-xl">Email:</label>
               <p className="text-xl">
                 {(session?.user?.email ?? "").replace("%", "@")}
               </p>
             </div>
+            {isAdmin && (
+              <Link href="/admin">
+                <Button>Đến trang quản trị</Button>
+              </Link>
+            )}
           </div>
         </TabsContent>
         <TabsContent value="package">
