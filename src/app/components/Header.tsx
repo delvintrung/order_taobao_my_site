@@ -82,6 +82,9 @@ const Header = () => {
               Feedback
             </li>
           </Link>
+          <Link href="/pages/faq">
+            <li className="hover:bg-gray-100 px-2 py-0.5 rounded-xl">Q&A</li>
+          </Link>
         </ul>
       </div>
 

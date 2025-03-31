@@ -4,8 +4,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import { SessionProvider } from "next-auth/react";
 import Provider from "./components/Provider";
+import { usePathname } from "next/navigation";
 
 const geistSans = Inter({
   variable: "--font-inter",
@@ -17,13 +17,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const pathname = usePathname();
+  const isAdmin = pathname.startsWith("/admin");
   return (
     <html lang="en">
       <body className={`${geistSans.variable} font-sans`}>
         <Provider>
-          <Header />
+          {!isAdmin && <Header />}
           {children}
-          <Footer />
+          {!isAdmin && <Footer />}
         </Provider>
       </body>
     </html>

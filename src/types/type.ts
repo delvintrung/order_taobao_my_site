@@ -10,6 +10,12 @@ export interface FeedbackCardProps {
   image_feedback?: string;
 }
 
+export interface Feedback {
+  name?: string;
+  link_info?: string;
+  image_feedback?: string;
+}
+
 export interface Session {
   user?: {
     id?: string;
