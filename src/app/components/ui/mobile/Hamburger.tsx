@@ -3,9 +3,13 @@
 import React, { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Link from "next/link";
+import { useSession, signIn, signOut } from "next-auth/react";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
 
 const Hamburger = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { data: session } = useSession();
   return (
     <div className="md:hidden relative">
       <div onClick={() => setIsOpen(!isOpen)} className="cursor-pointer p-3">
@@ -58,6 +62,35 @@ const Hamburger = () => {
                 Hỏi đáp
               </li>
             </Link>
+            {session ? (
+              <div>
+                <div className="flex-col gap-5 items-start">
+                  <Link
+                    href={`/pages/user/${session.user?.id!}`}
+                    className="p-2 cursor-pointer hover:bg-gray-100 flex items-center gap-2 "
+                  >
+                    <Avatar>
+                      <AvatarImage
+                        src={
+                          session.user?.image || "https://github.com/shadcn.png"
+                        }
+                      />
+                      <AvatarFallback>CN</AvatarFallback>
+                    </Avatar>
+                    <p className="text-sm">Thông tin tài khoản</p>
+                  </Link>
+                  <Button
+                    onClick={() => {
+                      signOut();
+                    }}
+                  >
+                    Đăng xuất
+                  </Button>
+                </div>
+              </div>
+            ) : (
+              <Button onClick={() => signIn("google")}>Đăng Nhập</Button>
+            )}
           </ul>
         </div>
       </div>

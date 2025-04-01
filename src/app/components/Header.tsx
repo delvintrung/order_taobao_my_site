@@ -90,7 +90,7 @@ const Header = () => {
 
       {/* Hamberger menu */}
       <Hamberger />
-      <div className="flex gap-5 items-center">
+      <div className="hidden md:flex gap-5 items-center">
         <div>
           <span>Giá Nhân Dân Tệ</span> <br />
           <span>1 CNY = {rate != 0 ? rate : "Đang cập nhật"} VND</span>
