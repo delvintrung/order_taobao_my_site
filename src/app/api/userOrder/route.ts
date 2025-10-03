@@ -57,7 +57,7 @@ export const PATCH = async (request: Request) => {
   try {
     const body = await request.json();
     const { id, ...rest } = body;
-    const order = await Order.findByIdAndUpdate(id, rest, { new: true });
+    const order = await Order.updateOne({ _id: id }, { ...rest });
     disconnectFromDB();
     return new Response(JSON.stringify(order), {
       status: 200,

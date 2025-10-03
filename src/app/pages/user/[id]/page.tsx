@@ -24,6 +24,12 @@ const User = () => {
   const [orders, setOrders] = useState<Order[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [isAdmin, setIsAdmin] = useState<boolean>(false);
+  const tableColumns = [
+    "Thông tin sản phẩm",
+    "Giá (Nhân dân tệ)",
+    "Thông tin người nhận",
+    "Trạng thái đơn hàng",
+  ];
 
   useEffect(() => {
     if (session?.user?.email == process.env.ADMIN_EMAIL) {
@@ -42,7 +48,7 @@ const User = () => {
     console.log(isAdmin);
   }, [params.id]);
   return (
-    <div className="flex flex-col items-center mt-30 h-screen px-20">
+    <div className="flex flex-col items-center mt-30 h-screen md:px-20 px-5">
       <Tabs defaultValue="account" className="w-full">
         <TabsList>
           <TabsTrigger value="account"> Tài Khoản</TabsTrigger>
@@ -82,7 +88,7 @@ const User = () => {
             <div>
               <Table>
                 <TableCaption>Danh sách các đơn hàng đã đặt</TableCaption>
-                <TableHeader>
+                <TableHeader className="hidden md:block">
                   <TableRow>
                     <TableHead className="w-[100px]">
                       Thông tin sản phẩm
@@ -99,7 +105,7 @@ const User = () => {
                   </TableRow>
                 </TableHeader>
                 <TableBody>
-                  {orders.map((order: Order) => (
+                  {orders.map((order: Order, index) => (
                     <TableRow className="h-[130px]">
                       <TableCell className="text-medium">
                         <p>{order.productName}</p>
@@ -115,7 +121,7 @@ const User = () => {
                         <p>Tổng tiền: {order.totalPrice}</p>
                       </TableCell>
                       <TableCell>
-                        <p>Tên nhận: {order.owener?.name}</p>
+                        <p>Tên nhận: {order.owener?.username}</p>
                         <p>Số điện thoại: {order.phone}</p>
                         <p>Địa chỉ: {order.address}</p>
                       </TableCell>

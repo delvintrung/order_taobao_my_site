@@ -11,6 +11,7 @@ export interface FeedbackCardProps {
 }
 
 export interface Feedback {
+  id?: string;
   name?: string;
   link_info?: string;
   image_feedback?: string;
@@ -28,7 +29,7 @@ export interface Session {
 
 export interface User {
   id: string;
-  name: string;
+  username: string;
   email: string;
   image: string;
 }

@@ -2,9 +2,9 @@
 import { Analytics } from "@vercel/analytics/react";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Provider from "./components/Provider";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import Provider from "../components/Provider";
 import { usePathname } from "next/navigation";
 
 const geistSans = Inter({

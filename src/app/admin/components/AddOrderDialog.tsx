@@ -1,6 +1,7 @@
 import React from "react";
 import {
   Dialog,
+  DialogClose,
   DialogContent,
   DialogDescription,
   DialogHeader,
@@ -121,7 +122,9 @@ const AddOrderDialog = () => {
               className="col-span-3"
             />
           </div>
-          <Button type="submit">Tạo đơn</Button>
+          <DialogClose asChild>
+            <Button type="submit">Tạo đơn</Button>
+          </DialogClose>
         </form>
       </DialogContent>
     </Dialog>

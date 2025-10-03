@@ -6,9 +6,9 @@ const Infomation = () => {
   return (
     <div
       id="info"
-      className="w-screen md:w-full md:h-[600px] bg-white overflow-hidden mt-10 md:mt-[100px]"
+      className="w-screen md:max-w-[1600px] md:h-[600px] bg-white overflow-hidden mt-10 md:mt-[100px]"
     >
-      <div className="md:px-20 px-10 pt-2 md:flex gap-10  pb-20">
+      <div className="md:px-20 px-10 pt-2 md:flex gap-10 pb-20 md:justify-between">
         <div className="mt-10">
           <div className="flex items-center">
             <div className="w-[50px] h-[50px] overflow-hidden rounded-full border">
